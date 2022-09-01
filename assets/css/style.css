@@ -1,0 +1,424 @@
+/* See README for guidelines regarding colors, spacing, size, etc. */
+/* CSS with "mobile-first" design and BEM naming pattern */
+
+/* font to use icons */
+@font-face {
+    font-family: 'icones';
+    src: url(../font/icones.ttf);
+}
+
+body{
+    background-color: #1D232A;
+    color: #fff;
+    font-family: 'Open Sans', 'icones', sans-serif;    
+}
+
+@media screen and (min-width: 940px){
+    body {
+        display: grid;
+        /* first column for the side-menu, second for the rest of the content */
+        grid-template-columns: auto 1fr;
+    }
+}
+
+/* HEADER */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #15191C;
+    padding: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+}
+
+.header__menu span::before{
+    /* will look for this content in 'Open Sans' (won't find it), and then in the 'icones' font family */
+    content:'\e904';
+    font-size: 24px;
+}
+
+.header__logo{
+    width: 40px;
+}
+
+.header__profile{ 
+    display: none; /* will be shown only on big screens*/ 
+}
+
+.header__notification span::before{
+    content:'\e906';
+    font-size: 24px;
+}
+
+@media screen and (min-width: 940px){
+    /* for bigger screens, the header is composed only by two elements: user profile and notifications icon */
+    .header{
+        background-color: #1D232A;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        column-gap: 32px;
+        padding: 16px 60px;
+        height: 80px;
+        box-sizing: border-box;
+    }
+
+    .header__profile{
+        /* one column for the avatar, one for the user name and one for the arrow */
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 8px;
+        padding: 8px 32px;
+        align-items: center;
+        justify-self: flex-end;
+        color: #95999C;
+        border-right: 1px solid #95999C;
+    }
+
+    .header__profile::before{
+        content: '';
+        display: block; 
+        width: 32px;
+        height: 32px;
+        background-image: url('../img/profile_1.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .header__profile::after{
+        content: '\e90d';
+        color: #FFF;
+        font-size: 1.5rem;
+    }
+
+    .header__menu,
+    .header__logo{
+        display: none;
+    }
+}
+
+/* MENU */
+.side-menu{
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+    height: 100vh;
+    background-color: #15191C;
+    /* 
+    * Properties to toggle when the side menu will show up. By default, it's positioned to
+    * not show up on screen. Left property will change when the header__menu button is clicked.
+    */
+    position: absolute;
+    left: -100vw;
+    transition: .3s;
+}
+
+/* this class will be added/removed via JavaScript */
+.side-menu--active{
+    left: 0;   
+}
+
+.side-menu__logo{
+    align-self: center;
+    width: 118px;
+    padding: 16px;
+}
+
+.side-menu__link{
+    color: #95999C;
+    height: 64px;
+    padding-left: 64px;
+    display:flex;
+    align-items:center;
+}
+
+.side-menu__link--active{
+    color: #FFF;
+    border-left: 8px solid #FFF;
+    /*need to assign a new padding to compensate the border added*/
+    padding-left: 56px;
+}
+
+@media screen and (min-width: 940px){
+    .side-menu{
+        position: static; /* always visible to the left side */
+        width: 200px;
+        /* setting it to be the first column and the first row (it will also span for the first 2 rows) */
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+}
+
+/* SIDE MENU: ICONS */
+.side-menu__link::before{
+    content:'';
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    position: absolute;
+    left: 24px;
+}
+
+.side-menu__link--inicio::before{
+    content:"\e902";
+}
+
+.side-menu__link--videos::before{
+    content: '\e90e';
+}
+
+.side-menu__link--picos::before{
+    content: '\e909';
+}
+
+.side-menu__link--integrantes::before{
+    content: '\e903';
+}
+
+.side-menu__link--camisas::before{
+    content: '\e900';
+}
+
+.side-menu__link--pinturas::before{
+    content: '\e90a';
+}
+
+/* MAIN CONTENT */
+.main{
+    padding: 24px 16px;
+    display: grid;
+    gap: 16px;
+}
+
+@media screen and (min-width: 940px){
+    .main{
+        /* featured card will be the second column and will occupy the rest of the available width */
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: 
+            'page-title page-title page-title'
+            'featured-video featured-video recent-videos'
+            'video-section video-section video-section'
+            'new-products featured-product featured-product'
+            'products-section products-section products-section'
+        ;
+        column-gap: 32px;
+        padding: 16px 60px;
+    }
+
+    .featured-video{
+        grid-area: featured-video;
+    }
+
+    .recent-videos{
+        grid-area: recent-videos;
+    }
+
+    .video-section{
+        grid-area: video-section;
+    }
+
+    .new-products{
+        grid-area: new-products;
+    }
+
+    .featured-product{
+        grid-area: featured-product;
+    }
+
+    .products-section{
+        grid-area: products-section;
+    }
+}
+
+.page-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.section{
+    display: grid;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.section-title{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 940px){
+    .section{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .section-title{
+        grid-column: span 4; /* will occupy an entire line */
+    }
+}
+
+/* CARDS */
+.card{
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden; /* hide whatever content that doesn't fit inside the card */
+    background-color: #2C343A;
+}
+
+/* there are different images for mobile and desktop */
+.card__image-desktop{
+    display: none;
+}
+
+.card--featured{ /* additional space at the bottom */
+    margin-bottom: 16px;
+}
+
+.card--recent{
+    display: none; /* only visible in larger screens */
+}
+
+.card__content{
+    padding: 16px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+}
+
+.card__featured{
+    grid-column: span 2;
+}
+
+.card__title{
+    font-size: 1.2rem;
+    font-weight: 700;
+    grid-column: span 2;
+}
+
+.card__author{
+    color: #95999C;
+    font-size: 0.9rem;
+    grid-column: span 2;   
+}
+
+.card__info{
+    display: flex; /* to adjust content inside the element and the ::before pseudoelement */
+    align-items: center;
+    color: #95999C;
+    font-size: 0.9rem;
+}
+
+.card__info--time::before{
+    content: '\e90c';
+    margin-right: 8px;
+}
+
+.card__info--views::before{
+    content: '\e90f';
+    margin-right: 8px;
+}
+
+.card__info--money::before{
+    content: '\e905';
+    margin-right: 8px;
+}
+
+.card__button{ /* styles for a generic button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0480DC;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    justify-self: flex-end;
+}
+
+.card__button--play::before{
+    content: '\e90b';
+    font-size: 24px;
+}
+
+.card__button--shop::before{
+    content: '\e901';
+    font-size: 24px;
+}
+
+.card__button--featured{
+    width: 100%;    
+    grid-column: span 2;
+}
+
+.card__button--feature::before{
+    margin-right: 8px; /* adjust space between icon and text */
+}
+
+@media screen and (min-width: 940px){
+    .card--featured{
+        margin-bottom: 0; /* we already have grid gap */
+    }
+
+    .card__image-mobile{
+        display: none;
+    }
+
+    .card__image-desktop{
+        display: block;
+    }
+    
+    .card--recent{
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        align-self: flex-start; /* will occupy only the necessary space at the beggining */
+        row-gap: 24px;
+        width: 256px;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    .card--recent .card__title {
+        grid-column: auto; /* on mobile screens, it's set to span 2 columns */
+    }
+
+    .card__link{ 
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #0480DC;
+        justify-self: flex-end;
+    }
+
+    .card__list{
+        grid-column: span 2;
+        display: grid; /* using grid here only to set row-gap between each item */
+        row-gap: 16px;
+    }
+
+    .card__item{
+        display: grid;
+        /* one column for the image and the other for the rest of the content */
+        grid-template-columns: auto 1fr;
+        gap: 8px;
+    }
+
+    .card__item-thumbnail {
+        grid-row: span 2;
+        width: 32px;
+    }
+
+    .card__item-title{
+        font-size: 0.9rem;
+        font-weight: 700;
+        line-height: 1.2rem;
+    }
+
+    .card__item-author{
+        font-size: 0.8rem;
+        color: #95999C;
+    }
+
+    .card__button--featured{
+        grid-column: auto;
+        padding: 16px 8px;
+    }
+}

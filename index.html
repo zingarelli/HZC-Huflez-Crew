@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HZC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <button class="header__menu" aria-label="Menu"><span></span></button>
+        <img src="assets/img/logo.svg" alt="Logotipo da HZC" class="header__logo">
+        <p class="header__profile">Matheus Zingarelli</p>
+        <button class="header__notification" aria-label="Notificações"><span></span></button>
+    </header>
+    <nav class="side-menu">
+        <img src="assets/img/logo.svg" alt="Logotipo da HZC" class="side-menu__logo">
+        <a href="#" class="side-menu__link side-menu__link--inicio side-menu__link--active">Início</a>
+        <a href="#" class="side-menu__link side-menu__link--videos">Vídeos</a>
+        <a href="#" class="side-menu__link side-menu__link--picos">Picos</a>
+        <a href="#" class="side-menu__link side-menu__link--integrantes">Integrantes</a>
+        <a href="#" class="side-menu__link side-menu__link--camisas">Camisas</a>
+        <a href="#" class="side-menu__link side-menu__link--pinturas">Pinturas</a>
+    </nav>
+    <main class="main">
+        <!-- FEATURED VIDEO -->
+        <h2 class="page-title">Início</h2>
+        <article class="card card--featured featured-video">
+            <img src="assets/img/banner-mobile_1.png" alt="Banner do cartão" class="card__image card__image-mobile">
+            <img src="assets/img/banner_1.png" alt="Banner do cartão" class="card__image card__image-desktop">
+            <div class="card__content">
+                <p class="card__featured">Vídeo em destaque</p>
+                <h3 class="card__title">Título qualquer</h3>
+                <p class="card__author">Matheus</p>
+                <p class="card__info card__info--time">33 minutos</p>
+                <p class="card__info card__info--views">33 visualizações</p>
+                <button class="card__button card__button--play card__button--featured">Assistir agora</button>
+            </div>
+        </article>
+        <article class="card card--recent recent-videos">
+            <h3 class="card__title">Vídeos recentes</h3>
+            <a href="#" class="card__link">Ver todos</a>
+            <ul class="card__list">
+                <li class="card__item">
+                    <img src="assets/img/miniatura_1.png" alt="thumbnail do vídeo" class="card__item-thumbnail">
+                    <h4 class="card__item-title">HZC - Love Machine</h4>
+                    <p class="card__item-author">Júlia Fonseca</p>
+                </li>
+                <li class="card__item">
+                    <img src="assets/img/miniatura_2.png" alt="thumbnail do vídeo" class="card__item-thumbnail">
+                    <h4 class="card__item-title">HZC - Love Machine</h4>
+                    <p class="card__item-author">Júlia Fonseca</p>
+                </li>
+                <li class="card__item">
+                    <img src="assets/img/miniatura_3.png" alt="thumbnail do vídeo" class="card__item-thumbnail">
+                    <h4 class="card__item-title">HZC - Love Machine</h4>
+                    <p class="card__item-author">Júlia Fonseca</p>
+                </li>
+                <li class="card__item">
+                    <img src="assets/img/miniatura_4.png" alt="thumbnail do vídeo" class="card__item-thumbnail">
+                    <h4 class="card__item-title">HZC - Love Machine</h4>
+                    <p class="card__item-author">Júlia Fonseca</p>
+                </li>
+                <li class="card__item">
+                    <img src="assets/img/miniatura_5.png" alt="thumbnail do vídeo" class="card__item-thumbnail">
+                    <h4 class="card__item-title">HZC - Love Machine</h4>
+                    <p class="card__item-author">Júlia Fonseca</p>
+                </li>
+            </ul>
+        </article>
+        <!-- VIDEOS SECTION -->
+        <section class="section video-section">
+            <h3 class="section-title">Vídeos mais vistos</h3>
+            <article class="card">
+                <img src="assets/img/video_1.png" alt="Imagem do vídeo" class="card__image">
+                <div class="card__content">
+                    <p class="card__author">Matheus</p>
+                    <h3 class="card__title">Título qualquer</h3>
+                    <p class="card__info card__info--time">33 minutos</p>
+                    <button class="card__button card__button--play" aria-label="Assistir ao vídeo"></button>
+                </div>
+            </article>
+            <article class="card">
+                <img src="assets/img/video_2.png" alt="Imagem do vídeo" class="card__image">
+                <div class="card__content">
+                    <p class="card__author">Matheus</p>
+                    <h3 class="card__title">Título qualquer</h3>
+                    <p class="card__info card__info--time">33 minutos</p>
+                    <button class="card__button card__button--play" aria-label="Assistir ao vídeo"></button>
+                </div>
+            </article>
+            <article class="card">
+                <img src="assets/img/video_3.png" alt="Imagem do vídeo" class="card__image">
+                <div class="card__content">
+                    <p class="card__author">Matheus</p>
+                    <h3 class="card__title">Título qualquer</h3>
+                    <p class="card__info card__info--time">33 minutos</p>
+                    <button class="card__button card__button--play" aria-label="Assistir ao vídeo"></button>
+                </div>
+            </article>
+            <article class="card">
+                <img src="assets/img/video_4.png" alt="Imagem do vídeo" class="card__image">
+                <div class="card__content">
+                    <p class="card__author">Matheus</p>
+                    <h3 class="card__title">Título qualquer</h3>
+                    <p class="card__info card__info--time">33 minutos</p>
+                    <button class="card__button card__button--play" aria-label="Assistir ao vídeo"></button>
+                </div>
+            </article>
+        </section>
+        <!-- FEATURED ART -->
+        <article class="card card--recent new-products">
+            <h3 class="card__title">Novas artes</h3>
+            <a href="#" class="card__link">Ver todas</a>
+            <ul class="card__list">
+                <li class="card__item">
+                    <img src="assets/img/miniatura_1.png" alt="thumbnail do vídeo" class="card__item-thumbnail">
+                    <h4 class="card__item-title">HZC - Love Machine</h4>
+                    <p class="card__item-author">Júlia Fonseca</p>
+                </li>
+                <li class="card__item">
+                    <img src="assets/img/miniatura_2.png" alt="thumbnail do vídeo" class="card__item-thumbnail">
+                    <h4 class="card__item-title">HZC - Love Machine</h4>
+                    <p class="card__item-author">Júlia Fonseca</p>
+                </li>
+                <li class="card__item">
+                    <img src="assets/img/miniatura_3.png" alt="thumbnail do vídeo" class="card__item-thumbnail">
+                    <h4 class="card__item-title">HZC - Love Machine</h4>
+                    <p class="card__item-author">Júlia Fonseca</p>
+                </li>
+                <li class="card__item">
+                    <img src="assets/img/miniatura_4.png" alt="thumbnail do vídeo" class="card__item-thumbnail">
+                    <h4 class="card__item-title">HZC - Love Machine</h4>
+                    <p class="card__item-author">Júlia Fonseca</p>
+                </li>
+                <li class="card__item">
+                    <img src="assets/img/miniatura_5.png" alt="thumbnail do vídeo" class="card__item-thumbnail">
+                    <h4 class="card__item-title">HZC - Love Machine</h4>
+                    <p class="card__item-author">Júlia Fonseca</p>
+                </li>                
+                <li class="card__item">
+                    <img src="assets/img/miniatura_5.png" alt="thumbnail do vídeo" class="card__item-thumbnail">
+                    <h4 class="card__item-title">HZC - Love Machine</h4>
+                    <p class="card__item-author">Júlia Fonseca</p>
+                </li>                
+                <li class="card__item">
+                    <img src="assets/img/miniatura_5.png" alt="thumbnail do vídeo" class="card__item-thumbnail">
+                    <h4 class="card__item-title">HZC - Love Machine</h4>
+                    <p class="card__item-author">Júlia Fonseca</p>
+                </li>                
+            </ul>
+        </article>
+        <article class="card card--featured featured-product">
+            <img src="assets/img/banner-mobile_2.png" alt="Banner do cartão" class="card__image-mobile">
+            <img src="assets/img/banner_2.png" alt="Banner do cartão" class="card__image-desktop">
+            <div class="card__content">
+                <p class="card__featured">Nova Arte</p>
+                <h3 class="card__title">Título qualquer</h3>
+                <p class="card__author">Matheus</p>
+                <p class="card__info card__info--money">33,33</p>
+                <p class="card__info card__info--views">95 visualizações</p>
+                <button class="card__button card__button--shop card__button--featured">Comprar agora</button>
+            </div>
+        </article>
+        <!-- SHIRTS SHOPPING SECTION -->
+        <section class="section products-section">
+            <h3 class="section-title">Camisetas mais recentes</h3>
+            <article class="card">
+                <img src="assets/img/produto_1.png" alt="Imagem do vídeo" class="card__image">
+                <div class="card__content">
+                    <p class="card__author">Matheus</p>
+                    <h3 class="card__title">Título qualquer</h3>
+                    <p class="card__info card__info--money">33,33</p>
+                    <button class="card__button card__button--shop" aria-label="Assistir ao vídeo"></button>
+                </div>
+            </article>
+            <article class="card">
+                <img src="assets/img/produto_2.png" alt="Imagem do vídeo" class="card__image">
+                <div class="card__content">
+                    <p class="card__author">Matheus</p>
+                    <h3 class="card__title">Título qualquer</h3>
+                    <p class="card__info card__info--money">33,33</p>
+                    <button class="card__button card__button--shop" aria-label="Assistir ao vídeo"></button>
+                </div>
+            </article>
+            <article class="card">
+                <img src="assets/img/produto_3.png" alt="Imagem do vídeo" class="card__image">
+                <div class="card__content">
+                    <p class="card__author">Matheus</p>
+                    <h3 class="card__title">Título qualquer</h3>
+                    <p class="card__info card__info--money">33,33</p>
+                    <button class="card__button card__button--shop" aria-label="Assistir ao vídeo"></button>
+                </div>
+            </article>
+            <article class="card">
+                <img src="assets/img/produto_4.png" alt="Imagem do vídeo" class="card__image">
+                <div class="card__content">
+                    <p class="card__author">Matheus</p>
+                    <h3 class="card__title">Título qualquer</h3>
+                    <p class="card__info card__info--money">33,33</p>
+                    <button class="card__button card__button--shop" aria-label="Assistir ao vídeo"></button>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
