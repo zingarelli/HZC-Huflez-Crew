@@ -45,9 +45,23 @@ body{
     display: none; /* will be shown only on big screens*/ 
 }
 
+.header__notification{
+    position: relative; /* to position green dot when there are new notifications */
+}
+
 .header__notification span::before{
     content:'\e906';
     font-size: 24px;
+}
+
+/* green dot when there are new notifications */
+.header__notification--active span::after{
+    content:'';
+    border-radius: 50%;
+    border: 4px solid #46da28;
+    position: absolute;
+    top: 19px;
+    left: 15px;
 }
 
 @media screen and (min-width: 940px){
@@ -190,6 +204,14 @@ body{
     gap: 16px;
 }
 
+.skatespots-map{
+    width: 100%;
+    height: 65vh;
+    border-radius: 15px;
+    margin-bottom: 16px;
+}
+
+/* GRID template for home page */
 @media screen and (min-width: 940px){
     .main{
         /* featured card will be the second column and will occupy the rest of the available width */
@@ -292,6 +314,7 @@ body{
     font-size: 1.2rem;
     font-weight: 700;
     grid-column: span 2;
+    line-height: 25px;
 }
 
 .card__author{
@@ -341,6 +364,11 @@ body{
 
 .card__button--shop::before{
     content: '\e901';
+    font-size: 24px;
+}
+
+.card__button--visit::before{
+    content:'\e908';
     font-size: 24px;
 }
 
