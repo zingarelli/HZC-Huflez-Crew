@@ -5,6 +5,8 @@ Este é um projeto resultante do curso Alura "CSS: dispondo elementos com Flexbo
 
 Instrutor: [Matheus Alberto](https://github.com/ikyrie).
 
+Link para o site hospedado no Vercel: https://hzc-flexbox-grid.vercel.app
+
 O site foi desenvolvido seguindo o padrão de desenvolvimento "mobile first" (estruturação e estilização feitos pensando primeiro em telas de celulares, e depois em telas maiores). Também foi aplicada a nomenclatura de classes utilizando a "metodologia BEM" (Block, Element, Modifier), tornando o CSS mais organizado e minimizando conflitos de classes. 
 
 Visando responsividade, o layout do site é alterado quando a tela possui mais de 940 pixels de largura. No projeto original, a largura mínima era de 1440 pixels, porém, eu decidi alterá-la de modo a atender a telas um pouco menores, como as de laptop ou de tablet em posição paisagem. 
@@ -12,7 +14,10 @@ Visando responsividade, o layout do site é alterado quando a tela possui mais d
 O instrutor desenvolveu a página inicial passo a passo durante o curso, deixando como exercício montar a página de "Picos". O design de todas as telas está [disponível no Figma](https://www.figma.com/file/ibWktwVpnog76rMYOdVhks/Dispondo-elementos-com-flexbox-e-grid?node-id=54%3A2358).
 
 ## Página Inicial
-O conteúdo principal da página inicial é composta por muitos elementos que se repetem (uma imagem e uma seção com textos e um botão), e que foi chamada de "Card". Alterações no layout dos botões e tamanhos de fonte e de Cards foram tratados utilizando classes nomeadas com modificadores (padrão BEM) e também com ícones.
+
+![gif mostrando a página inicial para celular](https://user-images.githubusercontent.com/19349339/187994823-9c6a7856-36a9-47ba-9429-bc8513a6bac6.gif)
+
+O conteúdo principal da página inicial é composto por muitos elementos que se repetem (uma imagem e uma seção com textos e um botão), e que foi chamada de "Card". Alterações no layout dos botões e tamanhos de fonte e de Cards foram tratados utilizando classes nomeadas com modificadores (padrão BEM) e também com ícones.
 
 O Flexbox foi utilizado em algumas tags que continham ícones, de modo a organizar o posicionamento da tag e do ícone, por vezes adicionado com os pseudo-elementos `::before` e `::after`. O Flexbox foi também utilizado para posicionar os elementos no cabeçalho e no menu lateral (sendo que na versão mobile o menu lateral fica escondido e é acionado por um evento de click, tratado com JavaScript).
 
@@ -21,11 +26,19 @@ O GRID foi aplicado para posicionamento dos elementos contidos nos cards e um ma
 A alteração do layout para telas maiores foi feita com a utilização de media-queries, utilizando também classes personalizadas no CSS para mostrar seções do HTML que não aparecem na versão mobile.
 
 ## Página de Picos
+
+![gif mostrando a página de picos para celular](https://user-images.githubusercontent.com/19349339/187994792-74829f0b-72c0-41b0-8601-a25fbce81186.gif)
+
 Esta página segue um layout semelhante ao da página inicial e, graças à organização do HTML, do padrão BEM e do uso de Flexbox e GRID, muitos elementos puderam ser reaproveitados. Refatorei algumas partes do CSS, para tornar algumas classes mais genéricas, ajudando no reaproveitamento dos estilos, sem necessidade de criar um novo arquivo CSS.
 
 Aproveitei para criar um estilo alternativo ao ícone de notificação, utilizando somente CSS para desenhar um círculo verde, indicando ao usuário que há novas notificações para ele. O círculo pode ser colocado e removido por meio da classe `header__notification--active`.
 
 O destaque nessa página é a presença de um mapa indicando a localização de diversos picos (pistas para se andar de skate) na cidade do Rio de Janeiro. Ao invés de inserir uma imagem, decidi inserir um iframe do Google Maps na mesma localização apontada na imagem, adicionando um aspecto mais interativo à página.
+
+## Tela Desktop
+Segue um print do layout da página inicial em telas maiores:
+
+![print da página inicial para telas maiores](https://user-images.githubusercontent.com/19349339/187995268-3a177820-32a3-4ffd-8e8b-5779d1db8867.png)
 
 ---
 
