@@ -1,4 +1,4 @@
-# HZC | Skateboarding lifestyle 🛹
+# HZC | Huflez Crew 🛹
 Site para os amantes de skate e vida urbana do Rio de Janeiro.
 
 Este é um projeto resultante do curso Alura "CSS: dispondo elementos com Flexbox e Grid".
