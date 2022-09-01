@@ -1,5 +1,7 @@
-/* See README for guidelines regarding colors, spacing, size, etc. */
-/* CSS with "mobile-first" design and BEM naming pattern */
+/*
+ * See README for guidelines regarding colors, spacing, size, etc. 
+ * CSS with "mobile-first" design and BEM naming pattern 
+ */
 
 /* font to use icons */
 @font-face {
@@ -211,7 +213,6 @@ body{
     margin-bottom: 16px;
 }
 
-/* GRID template for home page */
 @media screen and (min-width: 940px){
     .main{
         /* featured card will be the second column and will occupy the rest of the available width */
