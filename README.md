@@ -1,19 +1,29 @@
 # HZC | Huflez Crew 🛹
-Site para os amantes de skate e vida urbana do Rio de Janeiro.
+
+Site para os amantes de skate e vida urbana no Rio de Janeiro.
+
+| :placard: Vitrine.Dev |     |
+| -------------  | --- |
+| :sparkles: Nome        | **HZC - Huflez Crew**
+| :label: Tecnologias | html, css
+| :rocket: URL         | https://hzc-flexbox-grid.vercel.app
+| :fire: Curso     | https://www.alura.com.br/curso-online-css-dispondo-elementos-flexbox-grid
+
+![](https://user-images.githubusercontent.com/19349339/190662119-6beba494-a757-453a-aae5-7a08f49453da.png#vitrinedev)
+
+## Detalhes do projeto
 
 Este é um projeto resultante do curso Alura "CSS: dispondo elementos com Flexbox e Grid".
 
 Instrutor: [Matheus Alberto](https://github.com/ikyrie).
 
-Link para o site hospedado no Vercel: https://hzc-flexbox-grid.vercel.app
-
-O site foi desenvolvido seguindo o padrão de desenvolvimento "mobile first" (estruturação e estilização feitos pensando primeiro em telas de celulares, e depois em telas maiores). Também foi aplicada a nomenclatura de classes utilizando a "metodologia BEM" (Block, Element, Modifier), tornando o CSS mais organizado e minimizando conflitos de classes. 
+O site foi desenvolvido seguindo o padrão de desenvolvimento **mobile first** (estruturação e estilização feitos pensando primeiro em telas de celulares, e depois em telas maiores). Também foi aplicada a nomenclatura de classes utilizando a **metodologia BEM** (Block, Element, Modifier), tornando o CSS mais organizado e minimizando conflitos de classes. 
 
 Visando responsividade, o layout do site é alterado quando a tela possui mais de 940 pixels de largura. No projeto original, a largura mínima era de 1440 pixels, porém, eu decidi alterá-la de modo a atender a telas um pouco menores, como as de laptop ou de tablet em posição paisagem. 
 
 O instrutor desenvolveu a página inicial passo a passo durante o curso, deixando como exercício montar a página de "Picos". O design de todas as telas está [disponível no Figma](https://www.figma.com/file/ibWktwVpnog76rMYOdVhks/Dispondo-elementos-com-flexbox-e-grid?node-id=54%3A2358).
 
-## Página Inicial
+### Página Inicial
 
 ![gif mostrando a página inicial para celular](https://user-images.githubusercontent.com/19349339/187994823-9c6a7856-36a9-47ba-9429-bc8513a6bac6.gif)
 
@@ -25,7 +35,7 @@ O GRID foi aplicado para posicionamento dos elementos contidos nos cards e um ma
 
 A alteração do layout para telas maiores foi feita com a utilização de media-queries, utilizando também classes personalizadas no CSS para mostrar seções do HTML que não aparecem na versão mobile.
 
-## Página de Picos
+### Página de Picos
 
 ![gif mostrando a página de picos para celular](https://user-images.githubusercontent.com/19349339/187994792-74829f0b-72c0-41b0-8601-a25fbce81186.gif)
 
@@ -35,7 +45,7 @@ Aproveitei para criar um estilo alternativo ao ícone de notificação, utilizan
 
 O destaque nessa página é a presença de um mapa indicando a localização de diversos picos (pistas para se andar de skate) na cidade do Rio de Janeiro. Ao invés de inserir uma imagem, decidi inserir um iframe do Google Maps na mesma localização apontada na imagem, adicionando um aspecto mais interativo à página.
 
-## Tela Desktop
+### Tela Desktop
 Segue um print do layout da página inicial em telas maiores:
 
 ![print da página inicial para telas maiores](https://user-images.githubusercontent.com/19349339/187995268-3a177820-32a3-4ffd-8e8b-5779d1db8867.png)
