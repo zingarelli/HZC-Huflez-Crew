@@ -4,7 +4,7 @@ Site para os amantes de skate e vida urbana no Rio de Janeiro.
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
-| :sparkles: Nome        | **HZC - Huflez Crew**
+| :sparkles: Nome        | **Página da HZC: skate e vida urbana**
 | :label: Tecnologias | html, css
 | :rocket: URL         | https://hzc-flexbox-grid.vercel.app
 | :fire: Curso     | https://www.alura.com.br/curso-online-css-dispondo-elementos-flexbox-grid
